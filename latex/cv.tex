@@ -1,0 +1,217 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage{CormorantGaramond}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+	\vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+\newtcbox{\tooltag}[1][black]{on line,
+	enhanced,          % needed for arc
+	arc=4pt,           % small rounding
+	colback=white,     % light fill
+	colframe=#1!60,     % stronger border
+	boxrule=0.2pt,     % thin border
+	boxsep=0.1pt,      % padding
+	left=5pt, right=5pt, top=-2pt, bottom=-1pt,
+	fontupper=\strut\color{black}\rmfamily\fontsize{8}{1}\selectfont
+}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\vspace{10pt}
+\begin{center}
+\end{center}
+
+\begin{center}
+	\textbf{\Large \scshape Vladislav Balabaev} \\ \vspace{8pt}
+	\small
+	\faIcon{github}
+	\href{https://github.com/vbalab}{\underline{github.com/vbalab}} $  $
+	\faIcon{telegram}
+	\href{https://t.me/vbalab}{\underline{t.me/vbalab}} $  $
+	\faIcon{envelope}
+	\href{mailto:vv.balabaev@gmail.com}
+	{\underline{vv.balabaev@gmail.com}} $  $
+	% \faIcon{map-marked-alt} Moscow, Russia
+\end{center}
+
+% -------------------- WORK EXPERIENCE --------------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{ML Engineer, \href{https://autonomy.yandex.ru}{\underline{Yandex, Autonomous vehicles, ML R\&D}}} \vspace{8pt}}{2026-01 -- 2026-08}
+{\small{Researched and prototyped architectural improvements for online HD map construction.\\Key contributions include topology-aware modules, alternative geometric losses, and temporal fusion}}
+
+\resumeProjectHeading
+{\textbf{Data Scientist, \href{https://www.vtb.ru}{\underline{VTB Bank}}} \vspace{8pt}}{2025-06 -- 2026-01}
+{\small{Predictive modelling, CLTV pipeline development.}}
+
+\resumeProjectHeading
+{\textbf{Data Scientist, \href{https://okkam.group/}{\underline{Okkam}}} \vspace{8pt}}{2024-06 -- 2024-08}
+{\small{Led marketing mix modeling project, providing advanced ad-hoc data analysis}}
+
+\resumeProjectHeading
+{\textbf{Data Scientist, \href{https://catalog.cft.ru/}{\underline{Center of Financial Technologies}}} \vspace{8pt}}{2023-01 -- 2023-09}
+{\small{Maintained end-to-end credit scoring pipeline, optimizing feature engineering and model selection. \\ Identified fraud patterns through statistical analysis and hypothesis testing}}
+
+\resumeProjectHeading
+{\textbf{Data Engineer, Internship,  \href{https://www.sberbank.com/index}{\underline{SBER}}}
+	\vspace{8pt}}{2022-09 -- 2022-12}
+{\small{Designed and shipped a Greenplum-PySpark library for the DS team. \\
+Automated data mart monitoring via SQL and PySpark pipelines}}
+
+\resumeProjectHeading
+{\textbf{Research Assistant, \href{https://www.nsu.ru/n/media/news/obrazovanie/v-ngu-sozdana-novaya-laboratoriya-analiziruyushchaya-otraslevye-rynki/}{\underline{Lab of Empirical Analysis of Industry Markets}}}
+	\vspace{8pt}}{2021-09 -- 2024-08}
+{\small{Gathered \& analyzed 3.5M+ Russian car sale ads to model optimal tax policy. \\ Modeled demand for "Family" retail chain using econometrics and ML}}
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+
+\resumeProjectHeading
+{\textbf{\href{https://t.me/NesRandomCoffeeBot}{\underline{NESpresso}} -- Official NES Alumni Telegram Bot} \vspace{8pt}}{}
+{\tooltag{OpenSearch} \tooltag{RAG} \tooltag{Aiogram} \tooltag{FastAPI} \tooltag{Postgres} \tooltag{Docker} \\
+	\small{Connects 3500+ NES alumni via meetups and smart search by query}}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Yandex School of Data Analysis}{2024 -- 2026}
+{Big Data Infrastructure}{GPA: 4.5/5.0}
+
+\resumeSubheading
+{The Chinese University of Hong Kong, Shenzhen}{2024 -- 2025}
+{Exchange Program}{GPA: 4.8/5.0}
+
+\resumeSubheading
+{New Economic School}{2023 -- 2026}
+{Master's in Economics}{GPA: 4.8/5.3}
+
+\resumeSubheading
+{Novosibirsk State University}{2019 -- 2023}
+{B.A. in Economics, Applied Econometrics}{GPA: 4.7/5.0}
+
+\resumeSubHeadingListEnd
+
+% -------------------- PROFESSIONAL SKILLS --------------------
+\section{Professional Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item	      {
+	      \vspace{3pt}
+	      $\circ$ \textbf{ML}{: Classical ML, causal and econometric modeling, NLP, CV, Generative Modeling}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{C{\Large ++}}{: OOP and design patterns, concurrency, network programming, metaprogramming}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{Python}{: fastapi, sqlalchemy, asyncio, pyspark, torch, catboost, plotly}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{Databases}{: SQLAlchemy, Postgres, Greenplum, Hadoop ecosystem}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{Tools}{: Linux/Unix, Docker, Git, Apache Spark, Redis, MLflow}
+	      \vspace{3pt}
+	      }}
+\end{itemize}
+
+\resumeSubHeadingListEnd
+
+\end{document}

@@ -1,0 +1,226 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+
+% -------------------- RUSSIAN / CYRILLIC SUPPORT --------------------
+% These three lines were added so Cyrillic text renders with pdfLaTeX.
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage{CormorantGaramond}
+% NOTE: Cormorant Garamond may not ship Cyrillic glyphs. If your Russian text
+% renders in a mismatched fallback font (or you see "Font shape ... undefined"
+% warnings), comment out the line above and uncomment the line below instead:
+% \usepackage{paratype}   % PT Serif/Sans — designed for Cyrillic, works with pdfLaTeX
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+	\vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+\newtcbox{\tooltag}[1][black]{on line,
+	enhanced,          % needed for arc
+	arc=4pt,           % small rounding
+	colback=white,     % light fill
+	colframe=#1!60,     % stronger border
+	boxrule=0.2pt,     % thin border
+	boxsep=0.1pt,      % padding
+	left=5pt, right=5pt, top=-2pt, bottom=-1pt,
+	fontupper=\strut\color{black}\rmfamily\fontsize{8}{1}\selectfont
+}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\vspace{10pt}
+\begin{center}
+\end{center}
+
+\begin{center}
+	\textbf{\Large \scshape Владислав Балабаев} \\ \vspace{8pt}
+	\small
+	\faIcon{github}
+	\href{https://github.com/vbalab}{\underline{github.com/vbalab}} $  $
+	\faIcon{telegram}
+	\href{https://t.me/vbalab}{\underline{t.me/vbalab}} $  $
+	\faIcon{envelope}
+	\href{mailto:vv.balabaev@gmail.com}
+	{\underline{vv.balabaev@gmail.com}} $  $
+	% \faIcon{map-marked-alt} Москва, Россия
+\end{center}
+
+% -------------------- EDUCATION --------------------
+\section{Образование}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Школа анализа данных Яндекса (ШАД)}{2024 -- 2026}
+{Инфраструктура больших данных}{Средний балл: 4.5/5.0}
+
+\resumeSubheading
+{Китайский университет Гонконга, Шэньчжэнь}{2024 -- 2025}
+{Программа обмена}{Средний балл: 4.8/5.0}
+
+\resumeSubheading
+{Российская экономическая школа (РЭШ)}{2023 -- 2026}
+{Магистратура по экономике}{Средний балл: 4.8/5.3}
+
+\resumeSubheading
+{Новосибирский государственный университет}{2019 -- 2023}
+{Бакалавр экономики, прикладная эконометрика}{Средний балл: 4.7/5.0}
+
+\resumeSubHeadingListEnd
+
+% -------------------- WORK EXPERIENCE --------------------
+\section{Опыт работы}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{ML-инженер, \href{https://autonomy.yandex.ru}{\underline{Яндекс, Автономный Транспорт, ML R\&D}}} \vspace{8pt}}{2026-01 -- 2026-05}
+{\small{Исследовал и прототипировал архитектурные улучшения для онлайн-построения HD-карт.\\Ключевой вклад: модули, учитывающие топологию, альтернативные геометрические функции потерь, учет времени}}
+
+\resumeProjectHeading
+{\textbf{Дата-сайентист, \href{https://www.vtb.ru}{\underline{Банк ВТБ}}} \vspace{8pt}}{2025-06 -- 2026-01}
+{\small{Предиктивное моделирование, разработка пайплайна CLTV}}
+
+\resumeProjectHeading
+{\textbf{Дата-сайентист, \href{https://okkam.group/}{\underline{Okkam}}} \vspace{8pt}}{2024-06 -- 2024-08}
+{\small{Вел проект по marketing mix modeling, проводил продвинутый ad-hoc анализ данных}}
+
+\resumeProjectHeading
+{\textbf{Дата-сайентист, \href{https://catalog.cft.ru/}{\underline{Центр финансовых технологий (ЦФТ)}}} \vspace{8pt}}{2023-01 -- 2023-09}
+{\small{Поддерживал сквозной пайплайн кредитного скоринга, оптимизировал инженерию признаков и выбор моделей. \\ Выявлял паттерны мошенничества с помощью статистического анализа и проверки гипотез}}
+
+\resumeProjectHeading
+{\textbf{Дата-инженер, стажировка,  \href{https://www.sberbank.com/index}{\underline{СБЕР}}}
+	\vspace{8pt}}{2022-09 -- 2022-12}
+{\small{Спроектировал и выпустил библиотеку Greenplum-PySpark для DS-команды. \\
+Автоматизировал мониторинг витрин данных с помощью SQL- и PySpark-пайплайнов}}
+
+\resumeProjectHeading
+{\textbf{Научный сотрудник, \href{https://www.nsu.ru/n/media/news/obrazovanie/v-ngu-sozdana-novaya-laboratoriya-analiziruyushchaya-otraslevye-rynki/}{\underline{Лаборатория эмпирического анализа отраслевых рынков}}}
+	\vspace{8pt}}{2021-09 -- 2024-08}
+{\small{Собрал и проанализировал более 3,5 млн объявлений о продаже автомобилей в России для моделирования оптимальной налоговой политики. \\ Моделировал спрос для розничной сети «Семья» с помощью эконометрики и ML}}
+
+% -------------------- PROJECTS --------------------
+\section{Проекты}
+
+\resumeProjectHeading
+{\textbf{\href{https://t.me/NesRandomCoffeeBot}{\underline{NESpresso}} -- официальный Telegram-бот выпускников РЭШ} \vspace{8pt}}{}
+{\tooltag{OpenSearch} \tooltag{RAG} \tooltag{Aiogram} \tooltag{FastAPI} \tooltag{Postgres} \tooltag{Docker} \\
+	\small{Объединяет более 3500 выпускников РЭШ через встречи и умный поиск по запросу}}
+
+% -------------------- PROFESSIONAL SKILLS --------------------
+\section{Профессиональные навыки}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item	      {
+	      \vspace{3pt}
+	      $\circ$ \textbf{ML}{: классический ML, причинно-следственное и эконометрическое моделирование, NLP, CV, генеративное моделирование}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{C{\Large ++}}{: ООП и паттерны проектирования, многопоточность, сетевое программирование, метапрограммирование}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{Python}{: fastapi, sqlalchemy, asyncio, pyspark, torch, catboost, plotly}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{Базы данных}{: SQLAlchemy, Postgres, Greenplum, экосистема Hadoop}
+	      \vspace{2pt}
+
+	      $\circ$ \textbf{Инструменты}{: Linux/Unix, Docker, Git, Apache Spark, Redis, MLflow}
+	      \vspace{3pt}
+	      }}
+\end{itemize}
+
+\resumeSubHeadingListEnd
+
+\end{document}
